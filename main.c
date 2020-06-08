@@ -13,7 +13,7 @@ int main(int argc, char* argv[]){
 	char line[SIZE_T];
 
 	if(argc > 2){
-		char msg[] = "Use: mycat namefile\n";
+		char msg[] = "Use: ./build/mycat namefile\n";
 		write(STDOUT_FILENO, msg, sizeof(msg));
 		return 0;
 	}
