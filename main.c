@@ -27,7 +27,8 @@ int main(int argc, char* argv[]){
 		int fd = open(argv[1], O_RDONLY);
 		int tam;
 		if(fd == -1){
-			printf("Error al abrir el archivo\n");
+			char errorf[] = "Error al abrir el archivo\n";
+			write(STDOUT_FILENO, errorf, sizeof(errorf));
 		}
 		while((tam = read(fd, line, SIZE_T)) > 0){
 			write(STDOUT_FILENO, line, tam);
